@@ -5,7 +5,25 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Shield, CheckCircle, ArrowRight } from "lucide-react";
 
-export default function ProductsClient({ products }) {
+type Product = {
+  id: string;
+  title?: string;
+  description?: string;
+  category?: string;
+  listing_media?: {
+    path?: string;
+  }[];
+  price?: {
+    value?: number;
+  };
+  seller?: {
+    business?: {
+      verified?: boolean;
+    };
+  };
+};
+
+export default function ProductsClient({ products }: { products: Product[] }) {
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [searchTerm, setSearchTerm] = useState("");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
