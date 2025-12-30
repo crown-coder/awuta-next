@@ -1,4 +1,6 @@
+// app/products/page.tsx
 import ProductsClient from "./ProductsClient";
+import type { Metadata } from "next";
 
 async function getProducts() {
   const res = await fetch(
@@ -11,9 +13,9 @@ async function getProducts() {
   return res.json(); // Product[]
 }
 
-export const metadata = {
-  title: "Products | Elharees",
-  description: "Browse verified products from trusted sellers",
+export const metadata: Metadata = {
+  title: "Products | Awuta",
+  description: "Browse verified premium products from trusted sellers",
 };
 
 export default async function ProductsPage() {

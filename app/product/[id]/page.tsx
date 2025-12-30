@@ -15,7 +15,6 @@ async function getProduct(id: string) {
   return res.json();
 }
 
-// 🔥 THIS CONTROLS WHATSAPP / FACEBOOK / TWITTER PREVIEW
 export async function generateMetadata({
   params,
 }: {
@@ -28,23 +27,25 @@ export async function generateMetadata({
 
   const image = product.listing_media?.[0]?.path
     ? `${SUPABASE_PUBLIC_URL}/${product.listing_media[0].path}`
-    : "/placeholder-image.png";
+    : "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200&auto=format&fit=crop";
 
   const description =
     product.description ||
-    `Buy ${product.title} for ₦${product.price?.value?.toLocaleString()}`;
+    `Buy ${
+      product.title
+    } for ₦${product.price?.value?.toLocaleString()}. Premium quality verified by Awuta.`;
 
-  const url = `https://your-domain.com/product/${id}`;
+  const url = `https://awuta.com/product/${id}`;
 
   return {
-    title: product.title,
+    title: `${product.title} | Awuta`,
     description,
 
     openGraph: {
       title: product.title,
       description,
       url,
-      siteName: "Your Marketplace",
+      siteName: "Awuta",
       images: [
         {
           url: image,
@@ -53,7 +54,7 @@ export async function generateMetadata({
           alt: product.title,
         },
       ],
-      type: "website",
+      type: "article",
     },
 
     twitter: {
@@ -75,9 +76,5 @@ export default async function ProductPage({
 
   if (!product) notFound();
 
-  return (
-    <div className="py-8">
-      <ProductClient product={product} />
-    </div>
-  );
+  return <ProductClient product={product} />;
 }
