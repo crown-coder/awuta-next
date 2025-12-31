@@ -11,7 +11,6 @@ import {
   ArrowRight,
   Grid,
   List,
-  Filter,
   SlidersHorizontal,
   Star,
   TrendingUp,
@@ -135,7 +134,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50/30 to-white dark:from-gray-900 dark:via-gray-900/95 dark:to-gray-900 pt-32 pb-20">
+    <div className="min-h-screen bg-linear-to-b from-white via-gray-50/30 to-white dark:from-gray-900 dark:via-gray-900/95 dark:to-gray-900 pt-32 pb-20">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -143,18 +142,18 @@ export default function ProductsClient({ products }: { products: Product[] }) {
           animate={{ opacity: 1, y: 0 }}
           className="mb-12 text-center lg:text-left"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 border border-blue-500/20 dark:border-blue-500/30 mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-linear-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 border border-blue-500/20 dark:border-blue-500/30 mb-4">
             <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-            <span className="text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+            <span className="text-sm font-medium bg-linear-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
               PREMIUM MARKETPLACE
             </span>
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-            <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-300 dark:to-white bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-300 dark:to-white bg-clip-text text-transparent">
               Discover{" "}
             </span>
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
               Premium Products
             </span>
           </h1>
@@ -200,7 +199,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
           ].map((stat, index) => (
             <div
               key={index}
-              className={`bg-gradient-to-br ${stat.color}/10 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-4 text-center hover:shadow-lg transition-all duration-300`}
+              className={`bg-linear-to-br ${stat.color}/10 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-4 text-center hover:shadow-lg transition-all duration-300`}
             >
               <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
                 {stat.value}
@@ -313,7 +312,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
                           onClick={() => setSelectedCategory(category)}
                           className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
                             selectedCategory === category
-                              ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white"
+                              ? "bg-linear-to-r from-blue-500 to-purple-500 text-white"
                               : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
                           }`}
                         >
@@ -353,7 +352,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
                           onClick={() => setSortBy(option.value)}
                           className={`flex items-center gap-2 w-full p-2 rounded-lg transition-all ${
                             sortBy === option.value
-                              ? "bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 text-blue-600 dark:text-blue-400"
+                              ? "bg-linear-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 text-blue-600 dark:text-blue-400"
                               : "hover:bg-gray-100 dark:hover:bg-gray-700"
                           }`}
                         >
@@ -458,7 +457,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
                     <Link href={`/product/${product.id}`}>
                       <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl border border-gray-200/50 dark:border-gray-700/50 overflow-hidden hover:shadow-2xl transition-all duration-300 h-full">
                         {/* Image Container */}
-                        <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+                        <div className="relative aspect-square overflow-hidden bg-linear-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
                           <motion.img
                             src={image}
                             alt={product.title}
@@ -467,7 +466,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
                           />
 
                           {/* Overlay */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                          <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                           {/* Favorite Button */}
                           <button
@@ -492,7 +491,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
                               {product.tags.slice(0, 2).map((tag, idx) => (
                                 <span
                                   key={idx}
-                                  className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-blue-500/90 to-purple-500/90 text-white rounded-full backdrop-blur-sm"
+                                  className="px-2 py-1 text-xs font-medium bg-linear-to-r from-blue-500/90 to-purple-500/90 text-white rounded-full backdrop-blur-sm"
                                 >
                                   {tag}
                                 </span>
@@ -548,7 +547,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
                               )}
                             </div>
 
-                            <button className="group/btn inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300">
+                            <button className="group/btn inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300">
                               <span className="font-semibold text-sm">
                                 View
                               </span>
@@ -587,7 +586,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
                       <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl border border-gray-200/50 dark:border-gray-700/50 p-6 hover:shadow-xl transition-all duration-300">
                         <div className="flex items-start gap-6">
                           {/* Image */}
-                          <div className="relative w-32 h-32 flex-shrink-0 rounded-2xl overflow-hidden">
+                          <div className="relative w-32 h-32 shrink-0 rounded-2xl overflow-hidden">
                             <img
                               src={image}
                               alt={product.title}
@@ -648,7 +647,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
                                       .map((tag, idx) => (
                                         <span
                                           key={idx}
-                                          className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 text-blue-600 dark:text-blue-400 rounded-full"
+                                          className="px-2 py-1 text-xs font-medium bg-linear-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 text-blue-600 dark:text-blue-400 rounded-full"
                                         >
                                           {tag}
                                         </span>
@@ -657,7 +656,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
                                 )}
                               </div>
 
-                              <button className="group inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300">
+                              <button className="group inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300">
                                 <span className="font-semibold">
                                   View Details
                                 </span>
@@ -682,7 +681,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
             animate={{ opacity: 1, scale: 1 }}
             className="text-center py-20"
           >
-            <div className="w-24 h-24 mx-auto bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-full flex items-center justify-center mb-6">
+            <div className="w-24 h-24 mx-auto bg-linear-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-full flex items-center justify-center mb-6">
               <Search className="w-12 h-12 text-gray-400 dark:text-gray-500" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
@@ -698,7 +697,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
                 setSelectedCategory("all");
                 setPriceRange([0, 10000000]);
               }}
-              className="px-6 py-3 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold"
+              className="px-6 py-3 bg-linear-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold"
             >
               Clear all filters
             </button>

@@ -6,7 +6,7 @@ export default function Loading() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Image Skeleton */}
           <div className="space-y-4">
-            <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-700 rounded-3xl animate-pulse" />
+            <div className="aspect-square bg-linear-to-br from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-700 rounded-3xl animate-pulse" />
             <div className="flex gap-3">
               {[...Array(4)].map((_, i) => (
                 <div

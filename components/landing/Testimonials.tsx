@@ -12,19 +12,13 @@ import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
-  Sparkles,
   Award,
-  BarChart3,
   Users,
   Target,
   Zap,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import type { LucideIcon } from "lucide-react";
-
-/* =======================
-   Types
-======================= */
 
 type TestimonialType = "vendor" | "buyer";
 
@@ -52,10 +46,6 @@ interface StatItem {
 interface StarRatingProps {
   rating: number;
 }
-
-/* =======================
-   Component
-======================= */
 
 export default function Testimonials() {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
@@ -223,11 +213,11 @@ export default function Testimonials() {
   );
 
   return (
-    <section className="relative py-24 md:py-32 bg-gradient-to-b from-white via-gray-50/20 to-white dark:from-gray-900 dark:via-gray-900/95 dark:to-gray-900 overflow-hidden">
+    <section className="relative py-24 md:py-32 bg-linear-to-b from-white via-gray-50/20 to-white dark:from-gray-900 dark:via-gray-900/95 dark:to-gray-900 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tr from-purple-500/10 to-pink-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-linear-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-linear-to-tr from-purple-500/10 to-pink-500/10 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -239,9 +229,9 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-4xl mx-auto mb-16 md:mb-24"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 border border-blue-500/20 dark:border-blue-500/30 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-linear-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 border border-blue-500/20 dark:border-blue-500/30 mb-6">
             <Award className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-            <span className="text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+            <span className="text-sm font-medium bg-linear-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
               TRUSTED BY THOUSANDS
             </span>
           </div>
@@ -249,10 +239,10 @@ export default function Testimonials() {
 
         <motion.div>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-300 dark:to-white bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-300 dark:to-white bg-clip-text text-transparent">
               Stories of{" "}
             </span>
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
               Success
             </span>
           </h2>
@@ -283,7 +273,7 @@ export default function Testimonials() {
             >
               <div className="inline-flex p-3 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm mb-4">
                 <stat.icon
-                  className={`w-6 h-6 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}
+                  className={`w-6 h-6 bg-linear-to-r ${stat.color} bg-clip-text text-transparent`}
                 />
               </div>
               <div className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
@@ -293,7 +283,7 @@ export default function Testimonials() {
                 {stat.label}
               </div>
               <div
-                className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-gradient-to-r ${stat.color} rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-linear-to-r ${stat.color} rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
               />
             </motion.div>
           ))}
@@ -331,7 +321,7 @@ export default function Testimonials() {
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  className="w-full lg:w-1/3 flex-shrink-0"
+                  className="w-full lg:w-1/3 shrink-0"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -361,7 +351,7 @@ export default function Testimonials() {
                     {/* User Info */}
                     <div className="relative flex items-center gap-4">
                       <div
-                        className={`w-16 h-16 bg-gradient-to-br ${testimonial.color} rounded-2xl flex items-center justify-center text-white text-xl font-bold shadow-lg`}
+                        className={`w-16 h-16 bg-linear-to-br ${testimonial.color} rounded-2xl flex items-center justify-center text-white text-xl font-bold shadow-lg`}
                       >
                         {testimonial.avatar}
                       </div>
@@ -378,8 +368,8 @@ export default function Testimonials() {
                           <div
                             className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full backdrop-blur-sm ${
                               testimonial.type === "vendor"
-                                ? "bg-gradient-to-r from-blue-500/10 to-cyan-500/10 dark:from-blue-500/20 dark:to-cyan-500/20"
-                                : "bg-gradient-to-r from-purple-500/10 to-pink-500/10 dark:from-purple-500/20 dark:to-pink-500/20"
+                                ? "bg-linear-to-r from-blue-500/10 to-cyan-500/10 dark:from-blue-500/20 dark:to-cyan-500/20"
+                                : "bg-linear-to-r from-purple-500/10 to-pink-500/10 dark:from-purple-500/20 dark:to-pink-500/20"
                             }`}
                           >
                             {testimonial.type === "vendor" ? (
@@ -408,7 +398,7 @@ export default function Testimonials() {
 
                     {/* Stats Badge */}
                     <div className="relative mt-6 pt-6 border-t border-gray-200/50 dark:border-gray-700/50">
-                      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gray-50/50 to-gray-100/50 dark:from-gray-800/50 dark:to-gray-700/50 backdrop-blur-sm">
+                      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-linear-to-r from-gray-50/50 to-gray-100/50 dark:from-gray-800/50 dark:to-gray-700/50 backdrop-blur-sm">
                         <TrendingUp className="w-4 h-4 text-emerald-500" />
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           {testimonial.stats}
@@ -433,7 +423,7 @@ export default function Testimonials() {
                 }}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   currentSlide === index
-                    ? "w-8 bg-gradient-to-r from-blue-500 to-purple-500"
+                    ? "w-8 bg-linear-to-r from-blue-500 to-purple-500"
                     : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
                 }`}
               />
@@ -449,27 +439,27 @@ export default function Testimonials() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="relative mb-20"
         >
-          <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 dark:from-gray-900 dark:to-gray-800 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-gray-800 dark:border-gray-700 shadow-2xl overflow-hidden">
+          <div className="bg-linear-to-br from-gray-900/90 to-gray-800/90 dark:from-gray-900 dark:to-gray-800 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-gray-800 dark:border-gray-700 shadow-2xl overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full -translate-y-32 translate-x-32 blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-emerald-500 to-green-500 rounded-full translate-y-32 -translate-x-32 blur-3xl" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-linear-to-br from-blue-500 to-cyan-500 rounded-full -translate-y-32 translate-x-32 blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-linear-to-br from-emerald-500 to-green-500 rounded-full translate-y-32 -translate-x-32 blur-3xl" />
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
               <div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 dark:from-emerald-500/20 dark:to-cyan-500/20 border border-emerald-500/20 dark:border-emerald-500/30 mb-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-linear-to-r from-emerald-500/10 to-cyan-500/10 dark:from-emerald-500/20 dark:to-cyan-500/20 border border-emerald-500/20 dark:border-emerald-500/30 mb-6">
                   <Shield className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
-                  <span className="text-sm font-medium bg-gradient-to-r from-emerald-500 to-cyan-500 bg-clip-text text-transparent">
+                  <span className="text-sm font-medium bg-linear-to-r from-emerald-500 to-cyan-500 bg-clip-text text-transparent">
                     FEATURED SUCCESS STORY
                   </span>
                 </div>
 
                 <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
+                  <span className="bg-linear-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
                     From Startup to Market Leader{" "}
                   </span>
-                  <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+                  <span className="bg-linear-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
                     in 6 Months
                   </span>
                 </h3>
@@ -481,7 +471,7 @@ export default function Testimonials() {
                 </p>
 
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-white text-lg font-bold shadow-lg">
+                  <div className="w-14 h-14 bg-linear-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-white text-lg font-bold shadow-lg">
                     ET
                   </div>
                   <div>
@@ -493,11 +483,11 @@ export default function Testimonials() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 rounded-xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 dark:from-blue-500/20 dark:to-cyan-500/20 backdrop-blur-sm border border-white/10">
+                  <div className="text-center p-4 rounded-xl bg-linear-to-br from-blue-500/10 to-cyan-500/10 dark:from-blue-500/20 dark:to-cyan-500/20 backdrop-blur-sm border border-white/10">
                     <div className="text-2xl font-bold text-white">400%</div>
                     <div className="text-sm text-gray-300">Revenue Growth</div>
                   </div>
-                  <div className="text-center p-4 rounded-xl bg-gradient-to-br from-emerald-500/10 to-green-500/10 dark:from-emerald-500/20 dark:to-green-500/20 backdrop-blur-sm border border-white/10">
+                  <div className="text-center p-4 rounded-xl bg-linear-to-br from-emerald-500/10 to-green-500/10 dark:from-emerald-500/20 dark:to-green-500/20 backdrop-blur-sm border border-white/10">
                     <div className="text-2xl font-bold text-white">25+</div>
                     <div className="text-sm text-gray-300">
                       Countries Reached
@@ -508,7 +498,7 @@ export default function Testimonials() {
 
               {/* Platform Impact Card */}
               <div className="relative">
-                <div className="bg-gradient-to-br from-white/10 to-gray-900/10 dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-xl rounded-2xl p-8 border border-white/20 dark:border-gray-700/50 shadow-xl">
+                <div className="bg-linear-to-br from-white/10 to-gray-900/10 dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-xl rounded-2xl p-8 border border-white/20 dark:border-gray-700/50 shadow-xl">
                   <div className="space-y-6">
                     <div className="flex items-center justify-between">
                       <div>
@@ -519,7 +509,7 @@ export default function Testimonials() {
                           Average improvement after joining
                         </div>
                       </div>
-                      <div className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+                      <div className="text-4xl font-bold bg-linear-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
                         89%
                       </div>
                     </div>
@@ -551,7 +541,7 @@ export default function Testimonials() {
                               duration: 1,
                               delay: 0.5 + index * 0.1,
                             }}
-                            className="h-full bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full"
+                            className="h-full bg-linear-to-r from-emerald-500 to-cyan-500 rounded-full"
                           />
                         </div>
                       </div>
@@ -572,10 +562,10 @@ export default function Testimonials() {
           className="text-center"
         >
           <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-            <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-300 dark:to-white bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-300 dark:to-white bg-clip-text text-transparent">
               Ready to Write Your{" "}
             </span>
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Success Story?
             </span>
           </h3>
@@ -586,7 +576,7 @@ export default function Testimonials() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/join"
-              className="group px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-3 font-semibold text-lg"
+              className="group px-8 py-4 bg-linear-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-3 font-semibold text-lg"
             >
               Start Your Journey
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

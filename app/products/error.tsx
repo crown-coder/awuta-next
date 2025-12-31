@@ -20,10 +20,10 @@ export default function Error({
     <div className="min-h-[80vh] flex items-center justify-center px-4">
       <div className="max-w-md mx-auto text-center">
         <div className="relative mb-8">
-          <div className="w-24 h-24 mx-auto bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-full flex items-center justify-center">
+          <div className="w-24 h-24 mx-auto bg-linear-to-br from-red-500/20 to-orange-500/20 rounded-full flex items-center justify-center">
             <AlertCircle className="w-12 h-12 text-red-500 dark:text-red-400" />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-full blur-2xl" />
+          <div className="absolute inset-0 bg-linear-to-r from-red-500/10 to-orange-500/10 rounded-full blur-2xl" />
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
@@ -46,7 +46,7 @@ export default function Error({
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={reset}
-            className="group px-6 py-3 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-3 font-semibold"
+            className="group px-6 py-3 bg-linear-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-3 font-semibold"
           >
             <RefreshCw className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" />
             Try again

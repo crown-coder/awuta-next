@@ -6,9 +6,6 @@ import type { ComponentType } from "react";
 import { Apple, Menu, X, Smartphone, ChevronRight } from "lucide-react";
 import { FaGooglePlay } from "react-icons/fa";
 
-/* ================================
-   Types
-================================ */
 type AppDownloadButtonProps = {
   platform: "ios" | "android";
   icon: ComponentType<{ className?: string }>;
@@ -17,9 +14,6 @@ type AppDownloadButtonProps = {
   className?: string;
 };
 
-/* ================================
-   Component
-================================ */
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -44,9 +38,6 @@ export default function Navbar() {
     };
   }, []);
 
-  /* ================================
-     Sub-component
-  ================================ */
   const AppDownloadButton: React.FC<AppDownloadButtonProps> = ({
     icon: Icon,
     label,
@@ -56,7 +47,7 @@ export default function Navbar() {
     <button
       className={`
         group flex items-center gap-3 px-4 py-3 rounded-xl
-        bg-gradient-to-br from-white/10 to-white/5
+        bg-linear-to-br from-white/10 to-white/5
         backdrop-blur-sm border border-white/20
         hover:from-white/20 hover:to-white/10
         hover:border-white/30
@@ -91,10 +82,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+          <div className="w-8 h-8 rounded-xl bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center">
             <Smartphone className="w-4 h-4 text-white" />
           </div>
-          <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+          <span className="text-xl font-bold tracking-tight bg-linear-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
             Awuta
           </span>
           <span className="text-xs px-2 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 font-medium">
@@ -105,7 +96,7 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           <div className="flex items-center gap-6 text-sm font-medium">
-            {["products", "features", "pricing", "support"].map((item) => (
+            {["products", "features", "privacy", "terms"].map((item) => (
               <Link
                 key={item}
                 href={`/${item}`}
@@ -146,23 +137,18 @@ export default function Navbar() {
       {open && (
         <div className="lg:hidden bg-white/95 dark:bg-black/95 backdrop-blur-xl border-t border-gray-200 dark:border-white/10 px-6 py-6 space-y-6">
           <div className="space-y-4">
-            {[
-              "products",
-              "features",
-              "pricing",
-              "support",
-              "privacy",
-              "terms",
-            ].map((item) => (
-              <Link
-                key={item}
-                href={`/${item}`}
-                onClick={() => setOpen(false)}
-                className="block py-3 text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
-              </Link>
-            ))}
+            {["products", "features", "support", "terms", "privacy"].map(
+              (item) => (
+                <Link
+                  key={item}
+                  href={`/${item}`}
+                  onClick={() => setOpen(false)}
+                  className="block py-3 text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                </Link>
+              )
+            )}
           </div>
 
           <div className="pt-6 border-t border-gray-200 dark:border-white/10">

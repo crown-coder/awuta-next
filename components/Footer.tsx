@@ -88,7 +88,7 @@ export default function Footer() {
   return (
     <footer className="relative mt-24 md:mt-32 border-t border-gray-200/50 dark:border-gray-800/50">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50/30 dark:to-gray-900/30" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent to-gray-50/30 dark:to-gray-900/30" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
         {/* Main Footer Content */}
@@ -97,11 +97,11 @@ export default function Footer() {
           <div className="space-y-8">
             {/* Brand */}
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center">
                 <div className="w-6 h-6 text-white">A</div>
               </div>
               <div>
-                <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+                <span className="text-2xl font-bold tracking-tight bg-linear-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                   Awuta
                 </span>
                 <div className="text-xs px-2 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 font-medium inline-block ml-2">
@@ -181,7 +181,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent dark:via-gray-800 my-8" />
+        <div className="h-px bg-linear-to-r from-transparent via-gray-200 to-transparent dark:via-gray-800 my-8" />
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">

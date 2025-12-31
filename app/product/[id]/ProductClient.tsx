@@ -29,11 +29,8 @@ import {
   Facebook,
   Linkedin,
   Eye,
-  TrendingUp,
   Users,
   Clock,
-  Award,
-  Zap,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -117,7 +114,7 @@ export default function ProductClient({ product }: { product: any }) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50/30 to-white dark:from-gray-900 dark:via-gray-900/95 dark:to-gray-900 pt-32 pb-20">
+    <div className="min-h-screen bg-linear-to-b from-white via-gray-50/30 to-white dark:from-gray-900 dark:via-gray-900/95 dark:to-gray-900 pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
         <Link
@@ -182,7 +179,7 @@ export default function ProductClient({ product }: { product: any }) {
 
               {/* Verified Badge */}
               {product.seller?.business?.verified && (
-                <div className="absolute bottom-6 left-6 flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500/90 to-green-500/90 backdrop-blur-sm rounded-full">
+                <div className="absolute bottom-6 left-6 flex items-center gap-2 px-4 py-2 bg-linear-to-r from-emerald-500/90 to-green-500/90 backdrop-blur-sm rounded-full">
                   <Shield className="w-4 h-4 text-white" />
                   <span className="text-sm font-medium text-white">
                     Verified Product
@@ -200,7 +197,7 @@ export default function ProductClient({ product }: { product: any }) {
                     onClick={() => setSelectedImage(i)}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
+                    className={`shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
                       selectedImage === i
                         ? "border-blue-500 shadow-lg scale-105"
                         : "border-gray-200/50 dark:border-gray-700/50 hover:border-gray-300 dark:hover:border-gray-600"
@@ -240,7 +237,7 @@ export default function ProductClient({ product }: { product: any }) {
               ].map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-sm rounded-2xl p-4 text-center border border-gray-200/50 dark:border-gray-700/50"
+                  className="bg-linear-to-br from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-sm rounded-2xl p-4 text-center border border-gray-200/50 dark:border-gray-700/50"
                 >
                   <stat.icon className="w-5 h-5 text-blue-500 dark:text-blue-400 mx-auto mb-2" />
                   <div className="text-lg font-bold text-gray-900 dark:text-white">
@@ -262,18 +259,18 @@ export default function ProductClient({ product }: { product: any }) {
           >
             {/* Category & Badges */}
             <div className="flex items-center gap-3">
-              <span className="px-3 py-1.5 text-xs font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 text-blue-600 dark:text-blue-400 rounded-full">
+              <span className="px-3 py-1.5 text-xs font-medium bg-linear-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 text-blue-600 dark:text-blue-400 rounded-full">
                 {product.category || "Uncategorized"}
               </span>
               {product.featured && (
-                <span className="px-3 py-1.5 text-xs font-medium bg-gradient-to-r from-amber-500/10 to-yellow-500/10 dark:from-amber-500/20 dark:to-yellow-500/20 text-amber-600 dark:text-amber-400 rounded-full">
+                <span className="px-3 py-1.5 text-xs font-medium bg-linear-to-r from-amber-500/10 to-yellow-500/10 dark:from-amber-500/20 dark:to-yellow-500/20 text-amber-600 dark:text-amber-400 rounded-full">
                   Featured
                 </span>
               )}
               {product.tags?.slice(0, 2).map((tag: string, idx: number) => (
                 <span
                   key={idx}
-                  className="px-3 py-1.5 text-xs font-medium bg-gradient-to-r from-gray-500/10 to-gray-600/10 dark:from-gray-500/20 dark:to-gray-600/20 text-gray-600 dark:text-gray-400 rounded-full"
+                  className="px-3 py-1.5 text-xs font-medium bg-linear-to-r from-gray-500/10 to-gray-600/10 dark:from-gray-500/20 dark:to-gray-600/20 text-gray-600 dark:text-gray-400 rounded-full"
                 >
                   {tag}
                 </span>
@@ -287,7 +284,7 @@ export default function ProductClient({ product }: { product: any }) {
 
             {/* Price */}
             <div className="flex items-center gap-4">
-              <div className="text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              <div className="text-4xl font-bold bg-linear-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 {formatPrice(product.price?.value)}
               </div>
               {product.originalPrice && (
@@ -296,7 +293,7 @@ export default function ProductClient({ product }: { product: any }) {
                 </div>
               )}
               {product.discount && (
-                <div className="px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-sm font-bold rounded-full">
+                <div className="px-3 py-1 bg-linear-to-r from-red-500 to-orange-500 text-white text-sm font-bold rounded-full">
                   -{product.discount}%
                 </div>
               )}
@@ -378,7 +375,7 @@ export default function ProductClient({ product }: { product: any }) {
               ].map((detail, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50"
+                  className="flex items-center gap-3 p-4 rounded-2xl bg-linear-to-br from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50"
                 >
                   <detail.icon className="w-5 h-5 text-blue-500 dark:text-blue-400" />
                   <div>
@@ -400,7 +397,7 @@ export default function ProductClient({ product }: { product: any }) {
               transition={{ delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 pt-6"
             >
-              <button className="group flex-1 px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-2xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-3 font-semibold text-lg">
+              <button className="group flex-1 px-8 py-4 bg-linear-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-2xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-3 font-semibold text-lg">
                 <ShoppingBag className="w-5 h-5" />
                 Contact Seller
                 <MessageSquare className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -436,7 +433,7 @@ export default function ProductClient({ product }: { product: any }) {
                       onError={() => setSellerImageError(true)}
                     />
                     {product.seller?.business?.verified && (
-                      <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full flex items-center justify-center">
+                      <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-linear-to-r from-emerald-500 to-green-500 rounded-full flex items-center justify-center">
                         <CheckCircle className="w-4 h-4 text-white" />
                       </div>
                     )}
@@ -491,11 +488,11 @@ export default function ProductClient({ product }: { product: any }) {
                         View Profile
                         <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
                       </Link>
-                      <button className="px-6 py-3 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 dark:from-blue-500/20 dark:to-cyan-500/20 text-blue-600 dark:text-blue-400 rounded-xl hover:scale-[1.02] transition-all duration-300 flex items-center gap-2 font-semibold">
+                      <button className="px-6 py-3 bg-linear-to-r from-blue-500/10 to-cyan-500/10 dark:from-blue-500/20 dark:to-cyan-500/20 text-blue-600 dark:text-blue-400 rounded-xl hover:scale-[1.02] transition-all duration-300 flex items-center gap-2 font-semibold">
                         <Phone className="w-4 h-4" />
                         Call Seller
                       </button>
-                      <button className="px-6 py-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 dark:from-purple-500/20 dark:to-pink-500/20 text-purple-600 dark:text-purple-400 rounded-xl hover:scale-[1.02] transition-all duration-300 flex items-center gap-2 font-semibold">
+                      <button className="px-6 py-3 bg-linear-to-r from-purple-500/10 to-pink-500/10 dark:from-purple-500/20 dark:to-pink-500/20 text-purple-600 dark:text-purple-400 rounded-xl hover:scale-[1.02] transition-all duration-300 flex items-center gap-2 font-semibold">
                         <Mail className="w-4 h-4" />
                         Message
                       </button>
@@ -588,7 +585,7 @@ export default function ProductClient({ product }: { product: any }) {
                       href={platform.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`group bg-gradient-to-br ${platform.color} rounded-2xl p-6 text-center hover:shadow-xl hover:scale-105 transition-all duration-300`}
+                      className={`group bg-linear-to-br ${platform.color} rounded-2xl p-6 text-center hover:shadow-xl hover:scale-105 transition-all duration-300`}
                     >
                       <platform.icon className="w-8 h-8 text-white mx-auto mb-3 group-hover:scale-110 transition-transform" />
                       <div className="text-sm font-medium text-white">
@@ -606,7 +603,7 @@ export default function ProductClient({ product }: { product: any }) {
                     </div>
                     <button
                       onClick={copyToClipboard}
-                      className="px-6 py-4 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 font-semibold"
+                      className="px-6 py-4 bg-linear-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 font-semibold"
                     >
                       {copied ? (
                         <>

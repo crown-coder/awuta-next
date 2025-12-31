@@ -103,7 +103,7 @@ export default function SellerClient({
     : "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&auto=format&fit=crop";
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50/30 to-white dark:from-gray-900 dark:via-gray-900/95 dark:to-gray-900 pt-32 pb-20">
+    <div className="min-h-screen bg-linear-to-b from-white via-gray-50/30 to-white dark:from-gray-900 dark:via-gray-900/95 dark:to-gray-900 pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
         <Link
@@ -118,7 +118,7 @@ export default function SellerClient({
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-br from-white/80 to-gray-50/80 dark:from-gray-800/80 dark:to-gray-900/80 backdrop-blur-xl rounded-3xl border border-gray-200/50 dark:border-gray-700/50 p-8 mb-12"
+          className="bg-linear-to-br from-white/80 to-gray-50/80 dark:from-gray-800/80 dark:to-gray-900/80 backdrop-blur-xl rounded-3xl border border-gray-200/50 dark:border-gray-700/50 p-8 mb-12"
         >
           <div className="flex flex-col lg:flex-row gap-8 items-start">
             {/* Seller Avatar */}
@@ -133,7 +133,7 @@ export default function SellerClient({
                 }}
               />
               {sellerStats.verified && (
-                <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full flex items-center justify-center shadow-lg">
+                <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-linear-to-r from-emerald-500 to-green-500 rounded-full flex items-center justify-center shadow-lg">
                   <Shield className="w-6 h-6 text-white" />
                 </div>
               )}
@@ -172,7 +172,7 @@ export default function SellerClient({
 
                 {/* Action Buttons */}
                 <div className="flex flex-wrap gap-3">
-                  <button className="group px-6 py-3 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 font-semibold">
+                  <button className="group px-6 py-3 bg-linear-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 font-semibold">
                     <MessageSquare className="w-4 h-4" />
                     Message
                   </button>
@@ -219,7 +219,7 @@ export default function SellerClient({
                 ].map((detail, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-br from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50"
+                    className="flex items-center gap-3 p-3 rounded-xl bg-linear-to-br from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50"
                   >
                     <detail.icon className="w-5 h-5 text-blue-500 dark:text-blue-400" />
                     <div>
@@ -272,10 +272,10 @@ export default function SellerClient({
           ].map((stat, index) => (
             <div
               key={index}
-              className={`bg-gradient-to-br ${stat.color}/10 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-6 text-center hover:shadow-lg transition-all duration-300`}
+              className={`bg-linear-to-br ${stat.color}/10 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-6 text-center hover:shadow-lg transition-all duration-300`}
             >
               <stat.icon
-                className={`w-8 h-8 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mx-auto mb-3`}
+                className={`w-8 h-8 bg-linear-to-r ${stat.color} bg-clip-text text-transparent mx-auto mb-3`}
               />
               <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
                 {stat.value}
@@ -401,7 +401,7 @@ export default function SellerClient({
                 <Link href={`/product/${product.id}`}>
                   <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl border border-gray-200/50 dark:border-gray-700/50 overflow-hidden hover:shadow-2xl transition-all duration-300 h-full">
                     {/* Image */}
-                    <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+                    <div className="relative aspect-square overflow-hidden bg-linear-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
                       <img
                         src={
                           product.listing_media?.[0]?.path
@@ -415,7 +415,7 @@ export default function SellerClient({
                             "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop";
                         }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
 
                     {/* Content */}
@@ -425,7 +425,7 @@ export default function SellerClient({
                           {product.category || "Uncategorized"}
                         </span>
                         {product.featured && (
-                          <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-amber-500/10 to-yellow-500/10 dark:from-amber-500/20 dark:to-yellow-500/20 text-amber-600 dark:text-amber-400 rounded-full">
+                          <span className="px-2 py-1 text-xs font-medium bg-linear-to-r from-amber-500/10 to-yellow-500/10 dark:from-amber-500/20 dark:to-yellow-500/20 text-amber-600 dark:text-amber-400 rounded-full">
                             Featured
                           </span>
                         )}
@@ -443,7 +443,7 @@ export default function SellerClient({
                         <div className="text-2xl font-bold text-gray-900 dark:text-white">
                           {formatPrice(product.price?.value)}
                         </div>
-                        <button className="group/btn inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300">
+                        <button className="group/btn inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300">
                           <ShoppingBag className="w-4 h-4" />
                           <span className="font-semibold text-sm">View</span>
                         </button>
@@ -474,7 +474,7 @@ export default function SellerClient({
                   <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl border border-gray-200/50 dark:border-gray-700/50 p-6 hover:shadow-xl transition-all duration-300">
                     <div className="flex items-start gap-6">
                       {/* Image */}
-                      <div className="relative w-24 h-24 lg:w-32 lg:h-32 flex-shrink-0 rounded-2xl overflow-hidden">
+                      <div className="relative w-24 h-24 lg:w-32 lg:h-32 shrink-0 rounded-2xl overflow-hidden">
                         <img
                           src={
                             product.listing_media?.[0]?.path
@@ -502,7 +502,7 @@ export default function SellerClient({
                                 {product.category || "Uncategorized"}
                               </span>
                               {product.featured && (
-                                <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-amber-500/10 to-yellow-500/10 dark:from-amber-500/20 dark:to-yellow-500/20 text-amber-600 dark:text-amber-400 rounded-full">
+                                <span className="px-2 py-1 text-xs font-medium bg-linear-to-r from-amber-500/10 to-yellow-500/10 dark:from-amber-500/20 dark:to-yellow-500/20 text-amber-600 dark:text-amber-400 rounded-full">
                                   Featured
                                 </span>
                               )}
@@ -516,7 +516,7 @@ export default function SellerClient({
                             <div className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                               {formatPrice(product.price?.value)}
                             </div>
-                            <button className="group inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300">
+                            <button className="group inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300">
                               <ShoppingBag className="w-4 h-4" />
                               <span className="font-semibold">
                                 View Details
@@ -540,7 +540,7 @@ export default function SellerClient({
             animate={{ opacity: 1, scale: 1 }}
             className="text-center py-16"
           >
-            <div className="w-24 h-24 mx-auto bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-full flex items-center justify-center mb-6">
+            <div className="w-24 h-24 mx-auto bg-linear-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-full flex items-center justify-center mb-6">
               <Package className="w-12 h-12 text-gray-400 dark:text-gray-500" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
@@ -586,7 +586,7 @@ export default function SellerClient({
                   onClick={() => setCurrentPage(pageNum)}
                   className={`w-10 h-10 rounded-xl font-medium transition-all ${
                     currentPage === pageNum
-                      ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white"
+                      ? "bg-linear-to-r from-blue-500 to-purple-500 text-white"
                       : "hover:bg-gray-100 dark:hover:bg-gray-800"
                   }`}
                 >

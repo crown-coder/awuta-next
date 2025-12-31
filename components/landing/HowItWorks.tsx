@@ -128,13 +128,13 @@ const HowItWorks = () => {
   return (
     <section
       id="how-it-works"
-      className="relative py-24 md:py-32 bg-gradient-to-b from-white to-gray-50/30 dark:from-gray-900 dark:via-gray-900/95 dark:to-gray-900 overflow-hidden"
+      className="relative py-24 md:py-32 bg-linear-to-b from-white to-gray-50/30 dark:from-gray-900 dark:via-gray-900/95 dark:to-gray-900 overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -left-40 w-96 h-96 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-gradient-to-tr from-emerald-500/10 to-cyan-500/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-gray-200/50 to-transparent dark:via-gray-700/30" />
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-linear-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-linear-to-tr from-emerald-500/10 to-cyan-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-px bg-linear-to-r from-transparent via-gray-200/50 to-transparent dark:via-gray-700/30" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -146,18 +146,18 @@ const HowItWorks = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-4xl mx-auto"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 border border-blue-500/20 dark:border-blue-500/30 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-linear-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 border border-blue-500/20 dark:border-blue-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-            <span className="text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+            <span className="text-sm font-medium bg-linear-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
               SIMPLE & SECURE PROCESS
             </span>
           </div>
 
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-300 dark:to-white bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-300 dark:to-white bg-clip-text text-transparent">
               How It{" "}
             </span>
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
               Works
             </span>
           </h2>
@@ -171,7 +171,7 @@ const HowItWorks = () => {
         {/* Steps */}
         <div className="relative mt-20 lg:mt-32">
           {/* Connecting Line (Desktop) */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-emerald-500/20 -translate-y-1/2" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-linear-to-r from-blue-500/20 via-purple-500/20 to-emerald-500/20 -translate-y-1/2" />
 
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
             {steps.map((step, index) => (
@@ -219,7 +219,7 @@ const HowItWorks = () => {
                         transition={{ delay: 0.2 + idx * 0.1 }}
                         className="flex items-center gap-4 p-3 rounded-xl bg-gray-50/50 dark:bg-gray-800/50"
                       >
-                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500" />
+                        <div className="w-2 h-2 rounded-full bg-linear-to-r from-blue-500 to-purple-500" />
                         <span className="text-gray-700 dark:text-gray-300 font-medium">
                           {feature}
                         </span>
@@ -249,7 +249,7 @@ const HowItWorks = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h3 className="text-4xl font-bold text-gray-900 dark:text-white">
               Built on{" "}
-              <span className="bg-gradient-to-r from-emerald-500 to-cyan-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-emerald-500 to-cyan-500 bg-clip-text text-transparent">
                 Trust & Security
               </span>
             </h3>
@@ -267,11 +267,11 @@ const HowItWorks = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className={`relative bg-gradient-to-br ${feature.gradient} backdrop-blur-sm rounded-2xl p-6 border border-gray-200/30 dark:border-gray-700/30 hover:shadow-xl transition-all duration-300`}
+                className={`relative bg-linear-to-br ${feature.gradient} backdrop-blur-sm rounded-2xl p-6 border border-gray-200/30 dark:border-gray-700/30 hover:shadow-xl transition-all duration-300`}
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div
-                    className={`p-3 rounded-xl bg-gradient-to-br ${feature.gradient}`}
+                    className={`p-3 rounded-xl bg-linear-to-br ${feature.gradient}`}
                   >
                     <feature.icon className={`w-6 h-6 ${feature.color}`} />
                   </div>
@@ -284,7 +284,7 @@ const HowItWorks = () => {
                   {feature.description}
                 </p>
 
-                <div className="text-sm font-semibold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+                <div className="text-sm font-semibold bg-linear-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                   {feature.stats}
                 </div>
               </motion.div>
@@ -300,11 +300,11 @@ const HowItWorks = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-24"
         >
-          <div className="bg-gradient-to-r from-white/50 to-gray-50/50 dark:from-gray-800/30 dark:to-gray-900/30 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-200/50 dark:border-gray-700/50">
+          <div className="bg-linear-to-r from-white/50 to-gray-50/50 dark:from-gray-800/30 dark:to-gray-900/30 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-200/50 dark:border-gray-700/50">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={benefit.title} className="text-center">
-                  <div className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 mb-4">
+                  <div className="inline-flex p-4 rounded-2xl bg-linear-to-br from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 mb-4">
                     <benefit.icon className="w-7 h-7 text-blue-600 dark:text-blue-400" />
                   </div>
                   <h4 className="font-bold text-gray-900 dark:text-white mb-2">
@@ -330,7 +330,7 @@ const HowItWorks = () => {
           <div className="inline-flex flex-col sm:flex-row gap-6 items-center justify-center">
             <a
               href="/signup"
-              className="group px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-2xl flex items-center justify-center gap-3 font-semibold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 min-w-[200px]"
+              className="group px-8 py-4 bg-linear-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-2xl flex items-center justify-center gap-3 font-semibold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 min-w-50"
             >
               <span>Start Selling Today</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -338,7 +338,7 @@ const HowItWorks = () => {
 
             <a
               href="/buyer-signup"
-              className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 rounded-2xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300 hover:scale-[1.02] min-w-[200px]"
+              className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 rounded-2xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300 hover:scale-[1.02] min-w-50"
             >
               Start Shopping
             </a>

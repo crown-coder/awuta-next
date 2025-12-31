@@ -14,13 +14,13 @@ const CTA = () => {
   return (
     <section className="py-24 md:py-32 relative overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50"></div>
+      <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-white to-purple-50"></div>
 
       {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-400/5 to-purple-400/5 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-linear-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-linear-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-linear-to-r from-blue-400/5 to-purple-400/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
@@ -32,7 +32,7 @@ const CTA = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full border border-blue-100 mb-8 shadow-sm"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-linear-to-r from-blue-50 to-purple-50 rounded-full border border-blue-100 mb-8 shadow-sm"
           >
             <Sparkles className="w-5 h-5 text-blue-600" />
             <span className="text-sm font-medium text-blue-700">
@@ -49,7 +49,7 @@ const CTA = () => {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-tight"
           >
             Transform Your{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Commerce
             </span>{" "}
             Experience
@@ -113,7 +113,7 @@ const CTA = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/signup"
-                className="group px-8 py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-3 font-semibold text-lg shadow-lg hover:-translate-y-1"
+                className="group px-8 py-5 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-3 font-semibold text-lg shadow-lg hover:-translate-y-1"
               >
                 Get Started Free
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -162,7 +162,7 @@ const CTA = () => {
               </a>
               <a
                 href="#download-android"
-                className="group px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-4"
+                className="group px-6 py-4 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-4"
               >
                 <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-white/20 transition-colors">
                   <svg
@@ -204,7 +204,7 @@ const CTA = () => {
       </div>
 
       {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-white to-transparent"></div>
     </section>
   );
 };

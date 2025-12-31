@@ -3,16 +3,10 @@
 import { motion } from "framer-motion";
 import {
   Store,
-  ShoppingBag,
   TrendingUp,
   Users,
-  MessageSquare,
-  Shield,
   CheckCircle,
-  Target,
-  BarChart,
   Zap,
-  Globe,
   Star,
   ArrowRight,
   Sparkles,
@@ -146,11 +140,11 @@ export default function VendorBuyerBenefits() {
   ];
 
   return (
-    <section className="relative py-24 md:py-32 bg-gradient-to-b from-white via-gray-50/20 to-white dark:from-gray-900 dark:via-gray-900/95 dark:to-gray-900 overflow-hidden">
+    <section className="relative py-24 md:py-32 bg-linear-to-b from-white via-gray-50/20 to-white dark:from-gray-900 dark:via-gray-900/95 dark:to-gray-900 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -left-40 w-96 h-96 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-gradient-to-tr from-purple-500/10 to-pink-500/10 rounded-full blur-3xl" />
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-linear-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-linear-to-tr from-purple-500/10 to-pink-500/10 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -162,9 +156,9 @@ export default function VendorBuyerBenefits() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-4xl mx-auto mb-16 md:mb-24"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 border border-blue-500/20 dark:border-blue-500/30 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-linear-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 border border-blue-500/20 dark:border-blue-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-            <span className="text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+            <span className="text-sm font-medium bg-linear-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
               WIN-WIN ECOSYSTEM
             </span>
           </div>
@@ -172,10 +166,10 @@ export default function VendorBuyerBenefits() {
 
         <motion.div>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-300 dark:to-white bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-300 dark:to-white bg-clip-text text-transparent">
               Value for{" "}
             </span>
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
               Everyone
             </span>
           </h2>
@@ -206,7 +200,7 @@ export default function VendorBuyerBenefits() {
             >
               <div className="inline-flex p-3 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm mb-4">
                 <stat.icon
-                  className={`w-6 h-6 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}
+                  className={`w-6 h-6 bg-linear-to-r ${stat.color} bg-clip-text text-transparent`}
                 />
               </div>
               <div className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
@@ -216,7 +210,7 @@ export default function VendorBuyerBenefits() {
                 {stat.label}
               </div>
               <div
-                className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-gradient-to-r ${stat.color} rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-linear-to-r ${stat.color} rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
               />
             </motion.div>
           ))}
@@ -235,17 +229,17 @@ export default function VendorBuyerBenefits() {
             {/* Card */}
             <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl border border-gray-200/50 dark:border-gray-700/50 p-8 lg:p-10 shadow-lg overflow-hidden">
               {/* Background Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-cyan-500/5 to-blue-500/5 rounded-3xl blur-xl opacity-50" />
+              <div className="absolute inset-0 bg-linear-to-br from-blue-500/10 via-cyan-500/5 to-blue-500/5 rounded-3xl blur-xl opacity-50" />
 
               {/* Header */}
               <div className="flex items-center gap-4 lg:gap-6 mb-10 relative">
-                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg">
+                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-linear-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg">
                   <Store className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
                 </div>
                 <div>
                   <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-2">
                     For{" "}
-                    <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                    <span className="bg-linear-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                       Vendors
                     </span>
                   </h3>
@@ -267,7 +261,7 @@ export default function VendorBuyerBenefits() {
                     className="group flex items-start gap-4 lg:gap-6 p-4 lg:p-6 rounded-2xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm hover:bg-white/80 dark:hover:bg-gray-800/80 transition-all duration-300 border border-transparent hover:border-gray-200/50 dark:hover:border-gray-700/50"
                   >
                     <div
-                      className={`w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br ${benefit.color} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      className={`w-12 h-12 lg:w-14 lg:h-14 bg-linear-to-br ${benefit.color} rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
                       <benefit.icon className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
                     </div>
@@ -278,7 +272,7 @@ export default function VendorBuyerBenefits() {
                       <p className="text-gray-600 dark:text-gray-400 mb-3 text-sm lg:text-base">
                         {benefit.description}
                       </p>
-                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 dark:from-blue-500/20 dark:to-cyan-500/20">
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-linear-to-r from-blue-500/10 to-cyan-500/10 dark:from-blue-500/20 dark:to-cyan-500/20">
                         <Zap className="w-3 h-3 lg:w-4 lg:h-4 text-blue-500 dark:text-blue-400" />
                         <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
                           {benefit.metrics}
@@ -299,7 +293,7 @@ export default function VendorBuyerBenefits() {
               >
                 <a
                   href="/vendor-signup"
-                  className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 font-semibold"
+                  className="group inline-flex items-center gap-3 px-8 py-4 bg-linear-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 font-semibold"
                 >
                   Start Selling
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -319,17 +313,17 @@ export default function VendorBuyerBenefits() {
             {/* Card */}
             <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl border border-gray-200/50 dark:border-gray-700/50 p-8 lg:p-10 shadow-lg overflow-hidden">
               {/* Background Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/5 to-purple-500/5 rounded-3xl blur-xl opacity-50" />
+              <div className="absolute inset-0 bg-linear-to-br from-purple-500/10 via-pink-500/5 to-purple-500/5 rounded-3xl blur-xl opacity-50" />
 
               {/* Header */}
               <div className="flex items-center gap-4 lg:gap-6 mb-10 relative">
-                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
+                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-linear-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
                   <ShoppingCart className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
                 </div>
                 <div>
                   <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-2">
                     For{" "}
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                    <span className="bg-linear-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                       Buyers
                     </span>
                   </h3>
@@ -351,7 +345,7 @@ export default function VendorBuyerBenefits() {
                     className="group flex items-start gap-4 lg:gap-6 p-4 lg:p-6 rounded-2xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm hover:bg-white/80 dark:hover:bg-gray-800/80 transition-all duration-300 border border-transparent hover:border-gray-200/50 dark:hover:border-gray-700/50"
                   >
                     <div
-                      className={`w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br ${benefit.color} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      className={`w-12 h-12 lg:w-14 lg:h-14 bg-linear-to-br ${benefit.color} rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
                       <benefit.icon className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
                     </div>
@@ -362,7 +356,7 @@ export default function VendorBuyerBenefits() {
                       <p className="text-gray-600 dark:text-gray-400 mb-3 text-sm lg:text-base">
                         {benefit.description}
                       </p>
-                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 dark:from-purple-500/20 dark:to-pink-500/20">
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-linear-to-r from-purple-500/10 to-pink-500/10 dark:from-purple-500/20 dark:to-pink-500/20">
                         <CheckCircle className="w-3 h-3 lg:w-4 lg:h-4 text-purple-500 dark:text-purple-400" />
                         <span className="text-sm font-medium text-purple-600 dark:text-purple-400">
                           {benefit.metrics}
@@ -383,7 +377,7 @@ export default function VendorBuyerBenefits() {
               >
                 <a
                   href="/explore"
-                  className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 font-semibold"
+                  className="group inline-flex items-center gap-3 px-8 py-4 bg-linear-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 font-semibold"
                 >
                   Start Shopping
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -401,20 +395,20 @@ export default function VendorBuyerBenefits() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-20 lg:mt-24 relative"
         >
-          <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 dark:from-gray-900 dark:to-gray-800 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-gray-800 dark:border-gray-700 shadow-2xl overflow-hidden">
+          <div className="bg-linear-to-br from-gray-900/90 to-gray-800/90 dark:from-gray-900 dark:to-gray-800 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-gray-800 dark:border-gray-700 shadow-2xl overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full -translate-y-32 translate-x-32 blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-full translate-y-32 -translate-x-32 blur-3xl" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-linear-to-br from-blue-500 to-purple-500 rounded-full -translate-y-32 translate-x-32 blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-linear-to-br from-emerald-500 to-cyan-500 rounded-full translate-y-32 -translate-x-32 blur-3xl" />
             </div>
 
             <div className="relative z-10">
               <div className="text-center max-w-3xl mx-auto">
                 <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
+                  <span className="bg-linear-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
                     One Platform,{" "}
                   </span>
-                  <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+                  <span className="bg-linear-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
                     Endless Opportunities
                   </span>
                 </h3>
