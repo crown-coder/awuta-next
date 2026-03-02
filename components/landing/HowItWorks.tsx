@@ -57,7 +57,7 @@ const HowItWorks = () => {
   return (
     <section
       id="how-it-works"
-      className="relative py-20 md:py-32 bg-white dark:bg-gray-900 overflow-hidden"
+      className="relative py-20 md:py-32 bg-white dark:bg-[rgb(0,25,0)] overflow-hidden"
     >
       {/* Subtle background elements */}
       <div className="absolute inset-0">
@@ -75,9 +75,9 @@ const HowItWorks = () => {
           className="text-center mb-16 md:mb-24"
         >
           <div className="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-4 tracking-widest uppercase">
-            <div className="w-1 h-1 rounded-full bg-blue-500" />
+            <div className="w-1 h-1 rounded-full bg-[rgb(91,199,97)]" />
             Process
-            <div className="w-1 h-1 rounded-full bg-blue-500" />
+            <div className="w-1 h-1 rounded-full bg-[rgb(91,199,97)]" />
           </div>
 
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 dark:text-white tracking-tight">
@@ -159,7 +159,7 @@ const HowItWorks = () => {
               >
                 <div className="p-6 border border-gray-200 dark:border-gray-800 rounded-xl hover:border-gray-300 dark:hover:border-gray-700 transition-colors">
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-[rgb(91,199,97)] mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-medium text-gray-900 dark:text-white mb-2">
                         {feature.title}
@@ -167,7 +167,7 @@ const HowItWorks = () => {
                       <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                         {feature.description}
                       </p>
-                      <div className="text-xs font-medium text-blue-600 dark:text-blue-400">
+                      <div className="text-xs font-medium text-[rgb(91,199,97)] dark:text-[rgb(91,199,97)]">
                         {feature.highlight}
                       </div>
                     </div>

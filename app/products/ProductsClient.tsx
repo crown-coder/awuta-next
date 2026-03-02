@@ -229,14 +229,14 @@ export default function ProductsClient({ products }: { products: Product[] }) {
     price ? `₦${price.toLocaleString()}` : "Price on request";
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 py-8">
+    <div className="min-h-screen bg-white dark:bg-[rgb(0,25,0)] py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-4 tracking-widest uppercase">
-            <div className="w-1 h-1 rounded-full bg-blue-500" />
+            <div className="w-1 h-1 rounded-full bg-[rgb(91,199,97)]" />
             Products
-            <div className="w-1 h-1 rounded-full bg-blue-500" />
+            <div className="w-1 h-1 rounded-full bg-[rgb(91,199,97)]" />
           </div>
 
           <h1 className="text-4xl md:text-5xl font-light text-gray-900 dark:text-white tracking-tight mb-4">
@@ -505,7 +505,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
                               )}
                             </div>
 
-                            <button className="flex items-center gap-1 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                            <button className="flex items-center gap-1 text-sm font-medium text-[rgb(91,199,97)] dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
                               View
                               <ArrowRight className="w-3 h-3" />
                             </button>

@@ -332,7 +332,7 @@ export default function SellerClient({
   }, [seller.links]);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 py-8">
+    <div className="min-h-screen bg-white dark:bg-[rgb(0,25,0)] py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Navigation */}
         <div className="flex items-center justify-between mb-8">

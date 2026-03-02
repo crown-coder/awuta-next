@@ -238,7 +238,7 @@ export default function ProductClient({ product }: { product: Product }) {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 py-8">
+    <div className="min-h-screen bg-white dark:bg-[rgb(0,25,0)] py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Navigation */}
         <Link
@@ -523,7 +523,7 @@ export default function ProductClient({ product }: { product: Product }) {
 
             {/* Action Buttons */}
             <div className="space-y-4">
-              <button className="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+              <button className="w-full py-3 bg-[rgb(91,199,97)] text-white rounded-lg hover:bg-[rgb(13,41,23)] transition-colors font-medium">
                 Purchase
               </button>
               <div className="flex gap-3">
